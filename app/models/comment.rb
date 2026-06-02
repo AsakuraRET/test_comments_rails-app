@@ -5,7 +5,7 @@ class Comment < ApplicationRecord
 
   validates :body, presence: true, length: { maximum: 1000 }
 
-  meilisearch auto_index: true, auto_remove: true do
+  meilisearch auto_index: !Rails.env.test?, auto_remove: !Rails.env.test? do
     attribute :body
     attribute :author_username do
       user.username
