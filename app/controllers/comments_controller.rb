@@ -1,5 +1,5 @@
 class CommentsController < AuthenticatedController
-  before_action :set_comment, only: [:edit, :update, :destroy]
+  before_action :set_comment, only: [ :edit, :update, :destroy ]
 
   def index
     @comments = Comment.includes(:user).order(created_at: :desc)
@@ -12,7 +12,7 @@ class CommentsController < AuthenticatedController
     else
       @comments = Comment.includes(:user).order(created_at: :desc)
     end
-    
+
     render turbo_stream: turbo_stream.update("comments_list", partial: "comments/list", locals: { comments: @comments })
   end
 

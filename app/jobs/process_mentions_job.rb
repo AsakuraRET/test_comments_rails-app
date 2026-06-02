@@ -12,7 +12,7 @@ class ProcessMentionsJob < ApplicationJob
         recipient: user,
         actor: comment.user,
         notifiable: comment,
-        action: 'mentioned'
+        action: "mentioned"
       )
     end
   end

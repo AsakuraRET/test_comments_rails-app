@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :comments, only: [:index, :create, :edit, :update, :destroy] do
+  resources :comments, only: [ :index, :create, :edit, :update, :destroy ] do
     collection do
-      get :search 
+      get :search
     end
   end
 
-  resources :notifications, only: [:index] do
+  resources :notifications, only: [ :index ] do
     member do
-      patch :mark_as_read 
+      patch :mark_as_read
     end
   end
 

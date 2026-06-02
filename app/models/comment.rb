@@ -11,7 +11,7 @@ class Comment < ApplicationRecord
       user.username
     end
 
-    searchable_attributes [:body]
+    searchable_attributes [ :body ]
   end
 
   private

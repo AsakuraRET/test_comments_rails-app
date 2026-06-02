@@ -3,7 +3,7 @@ class MentionsExtractor
 
   def self.call(text)
     return [] if text.blank?
-    
+
     text.scan(MENTION_REGEX).flatten.uniq
   end
 end
