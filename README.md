@@ -39,3 +39,4 @@ You'll need PostgreSQL, Redis, and Meilisearch running locally.
    ```
 
 The app will be available at `http://localhost:3000`.
+<img width="1331" height="828" alt="Снимок экрана 2026-06-02 в 18 40 11" src="https://github.com/user-attachments/assets/052b4c9b-9fb6-44cb-996d-a7ae5f84aad3" />
