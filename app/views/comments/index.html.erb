@@ -1,0 +1,21 @@
+<div class="max-w-3xl mx-auto space-y-6 mt-8">
+  
+  <div class="bg-white p-4 rounded shadow">
+    <%= form_with url: search_comments_path, method: :get, data: { turbo_stream: true }, class: "flex gap-2" do |f| %>
+      <%= f.text_field :query, placeholder: "Search with Meilisearch...", class: "flex-1 rounded border-gray-300" %>
+      <%= f.submit "Search", class: button_class(variant: :primary) %>
+    <% end %>
+  </div>
+
+  <div class="bg-white p-4 rounded shadow">
+    <%= form_with model: @comment, class: "space-y-2" do |f| %>
+      <%= f.text_area :body, rows: 3, placeholder: "Use @username to mention someone", class: "w-full rounded border-gray-300" %>
+      <%= f.submit "Post Comment", class: button_class(variant: :primary) %>
+    <% end %>
+  </div>
+
+  <div id="comments_list">
+    <%= render partial: "comments/list", locals: { comments: @comments } %>
+  </div>
+
+</div>

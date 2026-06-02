@@ -1,0 +1,14 @@
+<div class="max-w-2xl mx-auto mt-8 bg-white p-6 rounded-lg shadow border border-gray-100">
+  <h2 class="text-xl font-bold mb-4 text-gray-900">Edit Comment</h2>
+  
+  <%= form_with model: @comment, class: "space-y-4" do |f| %>
+    <div>
+      <%= f.text_area :body, rows: 4, class: "w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" %>
+    </div>
+    
+    <div class="flex items-center gap-3 mt-4">
+      <%= f.submit "Save Changes", class: button_class(variant: :primary) %>
+      <%= link_to "Cancel", root_path, class: button_class(variant: :secondary) %>
+    </div>
+  <% end %>
+</div>

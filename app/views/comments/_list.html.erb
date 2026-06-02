@@ -1,0 +1,24 @@
+<div class="space-y-4">
+  <% comments.each do |comment| %>
+    <div class="bg-white p-4 rounded shadow">
+      <div class="flex justify-between text-sm text-gray-500 mb-2">
+        <span class="font-bold text-gray-900">@<%= comment.user.username %></span>
+        <span><%= time_ago_in_words(comment.created_at) %> ago</span>
+      </div>
+      
+      <p class="text-gray-800 whitespace-pre-wrap"><%= comment.body %></p>
+      
+      <% if current_user == comment.user %>
+        <div class="mt-4 flex justify-end gap-2">
+          <%= link_to "Edit", edit_comment_path(comment), 
+                class: button_class(variant: :secondary) %>
+          
+          <%= button_to "Delete", comment_path(comment), 
+                method: :delete, 
+                form: { class: "inline-block", data: { turbo_confirm: "Are you sure?" } }, 
+                class: button_class(variant: :danger) %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

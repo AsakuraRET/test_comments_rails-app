@@ -1,0 +1,34 @@
+<div class="max-w-3xl mx-auto mt-8">
+  <h1 class="text-2xl font-bold mb-6 text-gray-900">Notifications</h1>
+
+  <div class="space-y-4">
+    <% if @notifications.any? %>
+      <% @notifications.each do |notification| %>
+        <div class="bg-white p-4 rounded shadow flex justify-between items-center <%= notification.read_at.nil? ? 'border-l-4 border-indigo-500 bg-indigo-50' : 'border border-gray-100' %>">
+          
+          <div>
+            <span class="font-bold text-gray-900">@<%= notification.actor.username %></span>
+            <span class="text-gray-700">mentioned you in a comment.</span>
+            <div class="text-sm text-gray-500 mt-1">
+              <%= time_ago_in_words(notification.created_at) %> ago
+            </div>
+            <p class="text-gray-600 text-sm mt-2 italic">"<%= notification.notifiable.body %>"</p>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <% if notification.read_at.nil? %>
+              <%= button_to "Mark as read", mark_as_read_notification_path(notification), method: :patch, class: "px-3 py-1 bg-indigo-100 text-indigo-700 text-sm rounded hover:bg-indigo-200" %>
+            <% else %>
+              <span class="text-sm text-gray-400">Read</span>
+            <% end %>
+          </div>
+
+        </div>
+      <% end %>
+    <% else %>
+      <div class="bg-white p-8 rounded shadow text-center text-gray-500">
+        You don't have any notifications yet.
+      </div>
+    <% end %>
+  </div>
+</div>
