@@ -202,7 +202,7 @@ GEM
       prettyprint
     prettyprint (0.2.0)
     prism (1.9.0)
-    psych (5.3.1)
+    psych (5.4.0)
       date
       stringio
     public_suffix (7.0.5)
@@ -341,11 +341,10 @@ GEM
     useragent (0.16.11)
     warden (1.2.9)
       rack (>= 2.0.9)
-    web-console (4.2.1)
-      actionview (>= 6.0.0)
-      activemodel (>= 6.0.0)
+    web-console (4.3.0)
+      actionview (>= 8.0.0)
       bindex (>= 0.4.0)
-      railties (>= 6.0.0)
+      railties (>= 8.0.0)
     websocket (1.2.11)
     websocket-driver (0.8.0)
       base64
@@ -388,7 +387,7 @@ DEPENDENCIES
   tailwindcss-rails (~> 3.0)
   turbo-rails (~> 2.0)
   tzinfo-data (~> 1.1)
-  web-console (~> 4.2)
+  web-console (~> 4.3)
 
 BUNDLED WITH
    2.6.6
