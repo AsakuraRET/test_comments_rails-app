@@ -1,6 +1,6 @@
 # Comments & Notifications (Rails 8)
 
-This is a test task implementing a comment system with @mentions and full-text search. The main focus was to keep the codebase clean, predictable, and close to standard Rails conventions without over-engineering.
+This is a test task implementing a comment system with @mentions and full-text search. The main focus was to keep the codebase clean, predictable, and close to standard Rails conventions.
 
 ## Tech Stack
 * Ruby 3.2+ / Rails 8.0
