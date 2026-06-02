@@ -8,7 +8,7 @@ gem "sprockets-rails", "~> 3.4"
 gem "importmap-rails", "~> 2.0"
 gem "turbo-rails", "~> 2.0"
 gem "stimulus-rails", "~> 1.3"
-gem "tailwindcss-rails", "~> 3.0"
+gem "tailwindcss-rails", "~> 4.4"
 gem "jbuilder", "~> 2.13"
 
 gem "devise", "~> 5.0"
