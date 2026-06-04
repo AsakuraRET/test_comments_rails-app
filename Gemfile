@@ -18,7 +18,7 @@ gem "sidekiq", "~> 8.1"
 gem "meilisearch", "~> 0.32.0"
 gem "meilisearch-rails", "~> 0.16.0"
 
-gem "bootsnap", "~> 1.18", require: false
+gem "bootsnap", "~> 1.24", require: false
 gem "tzinfo-data", "~> 1.1", platforms: %i[windows jruby]
 
 group :development, :test do
