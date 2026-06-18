@@ -206,7 +206,7 @@ GEM
       date
       stringio
     public_suffix (7.0.5)
-    puma (6.6.1)
+    puma (8.0.2)
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.2.6)
@@ -378,7 +378,7 @@ DEPENDENCIES
   meilisearch (~> 0.32.0)
   meilisearch-rails (~> 0.16.0)
   pg (~> 1.1)
-  puma (~> 6.4)
+  puma (~> 8.0)
   rails (~> 8.0.0)
   rubocop-rails-omakase (~> 1.0)
   selenium-webdriver (~> 4.20)

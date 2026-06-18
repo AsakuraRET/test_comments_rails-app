@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 gem "rails", "~> 8.0.0"
 gem "pg", "~> 1.1"
-gem "puma", "~> 6.4"
+gem "puma", "~> 8.0"
 
 gem "sprockets-rails", "~> 3.4"
 gem "importmap-rails", "~> 2.0"
